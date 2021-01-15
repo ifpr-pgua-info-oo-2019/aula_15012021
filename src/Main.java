@@ -14,7 +14,7 @@ public class Main {
         double somaNotas = 0.0;
         double nota = 0.0;
         double mediaNotas = 0.0;
-
+        int notasAbaixoMedia = 0;
         int cont=0;
 
         while(cont < QTDE_MAX_NOTAS){
@@ -45,6 +45,14 @@ public class Main {
 
         System.out.println("A soma das notas é:"+somaNotas);
         System.out.println("A média das notas é:"+mediaNotas);
+
+        for(int i=0;i<vetorNotas.length;i++){
+            if(vetorNotas[i] < mediaNotas){
+                notasAbaixoMedia += 1;
+            }
+        }
+
+        System.out.println("Aluno obteve "+notasAbaixoMedia+" abaixo da média...!!");
 
         if(mediaNotas >= 7.0){
             System.out.println("Aluno aprovado!!!");
