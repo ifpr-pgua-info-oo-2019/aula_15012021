@@ -9,6 +9,8 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
+        double vetorNotas[] = new double[QTDE_MAX_NOTAS];
+
         double somaNotas = 0.0;
         double nota = 0.0;
         double mediaNotas = 0.0;
@@ -22,6 +24,7 @@ public class Main {
 
             if(nota>=0 && nota <= 10){
 
+                vetorNotas[cont] = nota;
                 somaNotas += nota;
                 cont+=1;
 
@@ -33,6 +36,12 @@ public class Main {
         }
 
         mediaNotas = somaNotas/QTDE_MAX_NOTAS;
+
+        System.out.println("As notas digitadas foram:");
+        for(int i=0;i<vetorNotas.length;i++){
+            System.out.printf("%.2f, ",vetorNotas[i]);
+        }
+        System.out.printf("\n");
 
         System.out.println("A soma das notas é:"+somaNotas);
         System.out.println("A média das notas é:"+mediaNotas);
