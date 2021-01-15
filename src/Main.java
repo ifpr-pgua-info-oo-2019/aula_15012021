@@ -25,6 +25,13 @@ public class Main {
         System.out.println("A soma das notas é:"+somaNotas);
         System.out.println("A média das notas é:"+mediaNotas);
 
+        if(mediaNotas >= 7.0){
+            System.out.println("Aluno aprovado!!!");
+        }else if(mediaNotas>=5.0 && mediaNotas<7.0){
+            System.out.println("Aluno em recuperação!!!");
+        }else{
+            System.out.println("O barquinho afundou...!!!Até ano que vem!!");
+        }
 
     }
 
